@@ -1,0 +1,137 @@
+<h1>Help</h1>
+
+<p>
+    Below you can find server details for your Ethereal accounts.
+</p>
+
+<h4>SMTP configuration</h4>
+
+<div class="row">
+    <div class="col-12">
+        <table class="table table-responsive table-hover table-sm">
+            <tbody>
+                <tr>
+                    <th>
+                        Host
+                    </th>
+                    <td>
+                        <code>{{smtp.host}}</code>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Port
+                    </th>
+                    <td>
+                        <code>{{smtp.port}}</code>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Security
+                    </th>
+                    <td>
+                        <code>STARTTLS</code>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<h4>IMAP configuration</h4>
+
+<div class="row">
+    <div class="col-12">
+        <table class="table table-responsive table-hover table-sm">
+            <tbody>
+                <tr>
+                    <th>
+                        Host
+                    </th>
+                    <td>
+                        <code>{{imap.host}}</code>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Port
+                    </th>
+                    <td>
+                        <code>{{imap.port}}</code>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Security
+                    </th>
+                    <td>
+                        <code>TLS</code>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<h4>POP3 configuration</h4>
+
+<div class="row">
+    <div class="col-12">
+        <table class="table table-responsive table-hover table-sm">
+            <tbody>
+                <tr>
+                    <th>
+                        Host
+                    </th>
+                    <td>
+                        <code>{{pop3.host}}</code>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Port
+                    </th>
+                    <td>
+                        <code>{{pop3.port}}</code>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        Security
+                    </th>
+                    <td>
+                        <code>TLS</code>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div>
+    <h3>Inbound email</h3>
+    <p>
+        All usernames act as real email addresses that can receive mail. You can receive email to the following addresses:
+    </p>
+    <ul>
+        <li>
+            Your username, eg. somethingsomething@{{serviceDomain}}
+        </li>
+        <li>
+            Your username with dots in it, eg. some.thing.some.thing@{{serviceDomain}}
+        </li>
+        <li>
+            Your username with a plus label, eg. somethingsomething+somelabel@{{serviceDomain}}
+        </li>
+        <li>
+            Dots mixed with a plus label, eg. some.thing.somet.hing+somelabel@{{serviceDomain}}
+        </li>
+    </ul>
+</div>
+
+<div>
+    <h3>Examples</h3> Example for switching between a real sending account and Ethereal depending on the <code>NODE_ENV</code> context. This way you ca be sure that your development environment is not going to spam your customers.
+
+    <script src="https://gist.github.com/andris9/af3b041d12816c9e2899de7bfd5056aa.js"></script>
+</div>
